@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :posts, except: :index
   resources :users, only: :show
 
-  post "likes/:food_id/create", to: "likes#create", constraints: {food_id: /\d+/}, as: :likes_create
-  post "likes/:food_id/delete", to: "likes#delete", constraints: {food_id: /\d+/}, as: :likes_delete
+  post "likes/:post_id/create", to: "likes#create", constraints: {post_id: /\d+/}, as: :likes_create
+  post "likes/:post_id/delete", to: "likes#delete", constraints: {post_id: /\d+/}, as: :likes_delete
 
 
 end
