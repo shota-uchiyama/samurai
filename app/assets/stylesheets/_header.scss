@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .header__logo {
+    height: 200px;
+    width: 600px;
+    background-image: url("title.png");
+    margin-left: 450px;
+  }
+
+
+  .header__topic {
+    height: 200px;
+    width: 300px;
+    line-height: 200px;
+    
+    .post-btn {
+      text-decoration: none;
+      color: black;
+      font-size: 25px;
+    }
+
+    .home-btn {
+      text-decoration: none;
+      color: black;
+    }
+
+  }
+}
+
+.home-btn {
+  text-decoration: none;
+  margin-left: 10px;
+  color: black;
+
+}
+
+.header__right--btn {
+  text-decoration: none;
+  margin-left: 10px;
+  color: black;
+}
+
+.contents {
+  
+
+  .contents__left {
+    height: 580px;
+    width: 1000px;
+    background-image: url("baseball.gif");
+    margin: 0 auto;
+    border-color: red;
+    border-style: double;
+  }
+
+  .contents__right {
+    
+    width: 1000px;
+    
+    margin: 0 auto;
+    margin-top: 10px;
+
+  }
+}
+
+.form {
+  display: block;
+
+  .form__title {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .form__text {
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin: 15px auto;
+  }
+
+  .form__btn {
+    display: block;
+    width: 100px;
+    margin: 15px auto 0;
+  }
+
+  .file-select {
+    display: block;
+    margin: 0 auto;
+  }
+}
+

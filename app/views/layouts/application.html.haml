@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Samurai
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = link_to root_path, class:"home-btn" do
+      Home
+    - if user_signed_in?
+      = link_to current_user.nickname, user_path(current_user), class: "header__right--btn"
+      = link_to "Log out", destroy_user_session_path, method: :delete, class: "header__right--btn"
+    - else
+      = link_to "Log in", new_user_session_path, class: "header__right--btn"
+      = link_to "Sign up", new_user_registration_path, class: "header__right--btn"
+
+
+  %body
+    = yield
