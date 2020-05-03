@@ -4,6 +4,9 @@
   = @post.created_at
 .postAuthor
 
+.postImage
+  = @post.image
+
 - if user_signed_in? && current_user.id == @post.user_id
   .postManage
   = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
